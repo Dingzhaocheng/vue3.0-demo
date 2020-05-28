@@ -3,6 +3,7 @@
     <div class="dark-mode">
       <Table />
     </div>
+    <h3 class="title">该页面仅供学习参考，请勿用作其他用途</h3>
   </div>
 </template>
 
@@ -35,6 +36,11 @@ export default {
     width: 80%;
     margin: 10px auto;
     border-radius: 5px;
+  }
+  .title{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 </style>

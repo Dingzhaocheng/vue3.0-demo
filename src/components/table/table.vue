@@ -3,7 +3,7 @@
     <div class="container">
       <table class="table" cellspacing="0" cellpadding="0">
         <caption>
-          Covid Data Explorer
+          Covid Data Explorer（数据来源于丁香医生）
         </caption>
         <thead>
           <tr>
