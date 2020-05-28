@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="dark-mode">
+      <Table />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Table from "@/components/table/table.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
-  }
+    Table,
+  },
 };
 </script>
+<style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  background-color: #0c142c;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .dark-mode {
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+}
+</style>
