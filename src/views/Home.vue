@@ -27,7 +27,7 @@ export default {
   props: {
     id: Number,
   },
-
+  
   setup(props) {
     const id = props.id;
     const error = ref();
