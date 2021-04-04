@@ -30,6 +30,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
           ls -la ~/.ssh/
-          ssh  -o StrictHostKeyChecking=no circleci@121.36.41.47 "cd /root/home/uncleding/website;git pull";
+          ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP
+         
           
       #- run: sh circleci-deploy.sh
