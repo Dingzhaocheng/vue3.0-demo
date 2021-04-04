@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:latest #主容器，运行命令
     filters:
       branches:
         only: master
@@ -10,20 +10,21 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-          - "SHA256:mVMqF76rRrSn6NoF8nS8iIemKDe4xrL5b2CGTNcscx8"
+          - "ae:4a:97:01:2e:55:b4:20:22:33:d5:65:45:59:ac:23" #设置用户密钥
 
       - checkout
 
       # Download and cache dependencies
-      - restore_cache:
+      - restore_cache: #读取缓存
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run: yarn install
+      - run: echo "部署开始"
 
-      - save_cache:
+      - save_cache: #保存缓存，提高编译速度
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
