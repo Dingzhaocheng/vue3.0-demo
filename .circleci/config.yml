@@ -30,6 +30,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
           echo ${uncleding}
-          cd ~/.ssh | ls -a
+          cd ~/.ssh 
+          ls -a
           
       #- run: sh circleci-deploy.sh
