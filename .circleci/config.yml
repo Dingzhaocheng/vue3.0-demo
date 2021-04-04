@@ -29,7 +29,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
-          ls -la ~/.ssh/
           ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP
          
           
