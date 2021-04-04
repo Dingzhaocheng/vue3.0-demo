@@ -30,6 +30,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
           ls -la ~/.ssh/
-          ssh -i ~/.ssh/ecs-x-medium-2-linux-20200319103646 -o StrictHostKeyChecking=no circleci@121.36.41.47 "cd /root/home/uncleding/website;git pull";
+          ssh  -o StrictHostKeyChecking=no circleci@121.36.41.47 "cd /root/home/uncleding/website;git pull";
           
       #- run: sh circleci-deploy.sh
