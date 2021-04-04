@@ -29,6 +29,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
-          echo ${uncleding} |  ~/.ssh/uncleding
+          echo ${uncleding}
           
       #- run: sh circleci-deploy.sh
