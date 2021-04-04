@@ -29,7 +29,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
-          ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP
+          ssh -i ~/.ssh/id_rsa_circleci -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP
          
           
       #- run: sh circleci-deploy.sh
