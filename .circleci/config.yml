@@ -32,5 +32,6 @@ jobs:
           echo ${uncleding}
           cd ~/.ssh 
           ls -a
+          cat known_hosts
           
       #- run: sh circleci-deploy.sh
