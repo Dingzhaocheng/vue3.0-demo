@@ -29,6 +29,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
-          ssh -i ~/.ssh/id_rsa_ae4a97012e55b4202233d5654559ac23 -o StrictHostKeyChecking=no root@121.36.41.47 "cd /root/home/uncleding/website;git pull;
+          ssh -i ~/.ssh/id_rsa_ae4a97012e55b4202233d5654559ac23 -o StrictHostKeyChecking=no root@121.36.41.47 "cd /root/home/uncleding/website;git pull";
           
       #- run: sh circleci-deploy.sh
