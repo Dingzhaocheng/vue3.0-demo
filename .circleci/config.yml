@@ -32,6 +32,6 @@ jobs:
           echo ${uncleding}
           cd ~/.ssh 
           ls -a
-          cat known_hosts
+          cat id_rsa_ae4a97012e55b4202233d5654559ac23
           
       #- run: sh circleci-deploy.sh
