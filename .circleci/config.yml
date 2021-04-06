@@ -29,5 +29,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: |
-          ssh -i ~/.ssh/id_rsa_circleci -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./cricleci-deploy.sh"
+          ssh -i ~/.ssh/id_rsa_circleci -o StrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy.sh"
      
