@@ -1,5 +1,4 @@
 git pull
 yarn build
-git checkout circleci-project-setup
+git checkout master
 git push -u
-yarn dev
