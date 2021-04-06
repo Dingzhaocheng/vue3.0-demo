@@ -10,7 +10,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-          - "ae:4a:97:01:2e:55:b4:20:22:33:d5:65:45:59:ac:23" #设置用户密钥
+          - "6a:92:9a:dd:46:b1:aa:6a:b0:bc:6e:39:29:22:a9:f1" #设置用户密钥
 
       - checkout
 
