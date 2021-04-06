@@ -167,7 +167,7 @@ export default {
   @apply bg-blue-500;
   @apply h-screen;
   width: 60%;
-  background: url("../../../public/bg2.jpg") no-repeat;
+  background: url("https://dingzhaocheng.obs.cn-north-4.myhuaweicloud.com/bg2.jpg") no-repeat;
   background-size: cover;
   background-position: 0 0;
 }
