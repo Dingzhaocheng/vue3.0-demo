@@ -123,6 +123,21 @@
   resolved "https://registry.npm.taobao.org/@vue/shared/download/@vue/shared-3.0.7.tgz?cache=0&sync_timestamp=1614614419935&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fshared%2Fdownload%2F%40vue%2Fshared-3.0.7.tgz#96d52988efc07444c108c7c6803ba7cc93e40045"
   integrity sha1-ltUpiO/AdETBCMfGgDunzJPkAEU=
 
+"@vueuse/core@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.npm.taobao.org/@vueuse/core/download/@vueuse/core-4.7.0.tgz#733f4b86832346a014dfdf818e3773ebfcbaebc4"
+  integrity sha1-cz9LhoMjRqAU39+Bjjdz6/y668Q=
+  dependencies:
+    "@vueuse/shared" "4.7.0"
+    vue-demi latest
+
+"@vueuse/shared@4.7.0":
+  version "4.7.0"
+  resolved "https://registry.npm.taobao.org/@vueuse/shared/download/@vueuse/shared-4.7.0.tgz#b18de574f4b42382441765fb510f26421c3a72ca"
+  integrity sha1-sY3ldPS0I4JEF2X7UQ8mQhw6cso=
+  dependencies:
+    vue-demi latest
+
 acorn-node@^1.6.1:
   version "1.8.2"
   resolved "https://registry.npm.taobao.org/acorn-node/download/acorn-node-1.8.2.tgz#114c95d64539e53dede23de8b9d96df7c7ae2af8"
@@ -996,6 +1011,11 @@ vite@^2.1.0:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.1"
+
+vue-demi@latest:
+  version "0.7.4"
+  resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.7.4.tgz#4c6be525788e1f6b3fd5d4f5f9f2148cf6645979"
+  integrity sha1-TGvlJXiOH2s/1dT1+fIUjPZkWXk=
 
 vue-router@4:
   version "4.0.5"
