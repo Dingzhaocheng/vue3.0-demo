@@ -1,6 +1,8 @@
 
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "@/views/Home.vue";
+import Layout from "@/layout/Layout.vue"
+import NotFound from "@/components/NotFound.vue"
 const history = createWebHashHistory();
 import useStore from "@/store/store"
 const { store, } = useStore()
@@ -10,8 +12,13 @@ const router = createRouter({
         {
             path: '/home',
             name: "Home",
-            component: Home,
+            component: Layout,
             props: { id: 2 },
+        },
+        {
+            path: '/notfound',
+            name: "NotFound",
+            component: NotFound,
         },
         {
 
@@ -19,7 +26,7 @@ const router = createRouter({
             name: "Login",
             component: () => import("@/views/Login.vue")
         },
-        { path: '/:pathMatch(.*)*', redirect: '/' },
+        { path: '/:pathMatch(.*)*', redirect: '/notfound' },
         {
             path: "/",
             component: Home,

@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#app{
-    @apply h-screen
+#app {
+    @apply w-screen;
+    @apply h-screen;
 }
