@@ -17,9 +17,10 @@ import { defineAsyncComponent, onErrorCaptured, ref } from "vue";
 import Loading from "@/components/Loading.vue";
 const TheProducts = defineAsyncComponent({
   loader: () => import("@/components/TheProducts.vue"),
-  loadingComponent: Loading,
+  
 });
 export default {
+  name:"Home",
   components: {
     TheProducts,
     Loading,

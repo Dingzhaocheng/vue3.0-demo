@@ -23,26 +23,54 @@
         name="password"
       />
     </div>
-    <div class="text-center h-10 mt-8">
+    <div class="h-10 mt-8">
       <button
-        class="rounded text-sm w-full bg-blue-600 text-white pt-2 pb-2 active:bg-blue-900"
+        class="rounded text-sm w-full pt-2 pb-2  text-center bg-blue-600 text-white  active:bg-blue-900"
         type="submit"
       >
-        登录
+        <svg
+          v-show="loading"
+          class="animate-spin mt-0 mb-0 ml-auto mr-auto w-6 h-6"
+          
+          version="1.1"
+          id="loader"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          
+          viewBox="0 0 50 50"
+          style="enable-background: new 0 0 50 50;" 
+          xml:space="preserve"
+        >
+          <path
+            fill="#ffffff"
+            d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+          ></path>
+        </svg>
+      
+       <span v-show="!loading">登录</span> 
       </button>
     </div>
   </form>
 </template> 
 
-<script>
+<script >
 import { useVModel } from "@/composables/useVModel";
+import { ref } from '@vue/reactivity';
 export default {
   emits: ["update:name", "update:password", "submit"],
   props: {
     name: String,
     password: String,
+    loading:Boolean
   },
   setup(props) {
+
+   
+
+
+
     return {
       nameState: useVModel(props, "name"),
       passwordState: useVModel(props, "password"),

@@ -5,7 +5,7 @@
         <div class="flex items-center">
           <p class="text-4xl">Piper</p>
           <svg
-          class="h-11"
+            class="h-11"
             id="icons"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 48 48"
@@ -111,13 +111,18 @@
       </section>
     </div>
     <div
-      class=" w-2/5 h-full flex flex-col flex-nowrap justify-start items-center"
+      class="w-2/5 h-full flex flex-col flex-nowrap justify-start items-center"
     >
       <h3 class="text-lg text-center">Piper</h3>
-      <p class="mb-5 mt-2 text-xs">还未注册，点击这里<a  class="underline text-blue-500 cursor-pointer">注册</a></p>
+      <p class="mb-5 mt-2 text-xs">
+        还未注册，点击这里<a class="underline text-blue-500 cursor-pointer"
+          >注册</a
+        >
+      </p>
       <the-login-form
         v-model:name="loginForm.userName"
         v-model:password="loginForm.userPassword"
+        :loading="loading"
         @submit="onSubmit"
       >
       </the-login-form>
@@ -126,8 +131,10 @@
 </template>
 
 <script lang="ts">
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import TheLoginForm from "@/components/TheLoginForm.vue";
+import useStore from "@/store/store";
+import { useRouter } from 'vue-router';
 
 export default {
   name: "Login",
@@ -138,12 +145,23 @@ export default {
       userName: "",
       userPassword: "",
     });
+    const loading = ref(false);
+    const {store,setPIPERTOKEN} = useStore();
+     const router = useRouter();
 
     const onSubmit = () => {
-      setTimeout(() => {}, 3000);
+      loading.value = true;
+      setPIPERTOKEN('dingzhaocheng');
+      router.push({
+        name:"Home"
+      })
+      setTimeout(() => {
+        loading.value = false;
+
+      }, 3000);
     };
 
-    return { loginForm, onSubmit };
+    return { loginForm, onSubmit, loading };
   },
 };
 </script>
@@ -167,7 +185,8 @@ export default {
   @apply bg-blue-500;
   @apply h-screen;
   width: 60%;
-  background: url("https://dingzhaocheng.obs.cn-north-4.myhuaweicloud.com/bg2.jpg") no-repeat;
+  background: url("https://dingzhaocheng.obs.cn-north-4.myhuaweicloud.com/bg2.jpg")
+    no-repeat;
   background-size: cover;
   background-position: 0 0;
 }
