@@ -8,11 +8,6 @@ const router = createRouter({
     history,
     routes: [
         {
-            path: '/',
-            component: Home,
-            props: { id: 2 },
-        },
-        {
             path: '/home',
             name: "Home",
             component: Home,
@@ -24,7 +19,13 @@ const router = createRouter({
             name: "Login",
             component: () => import("@/views/Login.vue")
         },
-        { path: '/:pathMatch(.*)*', redirect: '/' }
+        { path: '/:pathMatch(.*)*', redirect: '/' },
+        {
+            path: "/",
+            component: Home,
+            props: { id: 2 },
+            redirect: "/home"
+        }
     ]
 })
 router.beforeEach((to, from, next) => {

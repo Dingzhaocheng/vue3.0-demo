@@ -21,9 +21,9 @@ import useCount from "@/composables/core";
 import useProduct from "@/composables/useProduct";
 export default defineComponent({
   name: "TheProduct",
-  /* props: {
+  props: {
     name: String,
-  }, */
+  },
   // 不能被结构，解构会失去其响应性。如果要解构，请使用toRefs()
   setup: async () => {
     /* const name = props.name; */

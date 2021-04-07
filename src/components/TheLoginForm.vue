@@ -30,7 +30,7 @@
       >
         <svg
           v-show="loading"
-          class="animate-spin mt-0 mb-0 ml-auto mr-auto w-6 h-6"
+          class="animate-spin mt-0 mb-0 ml-auto mr-auto w-5 h-5"
           
           version="1.1"
           id="loader"

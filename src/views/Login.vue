@@ -134,7 +134,7 @@
 import { reactive, ref } from "vue";
 import TheLoginForm from "@/components/TheLoginForm.vue";
 import useStore from "@/store/store";
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 export default {
   name: "Login",
@@ -146,18 +146,19 @@ export default {
       userPassword: "",
     });
     const loading = ref(false);
-    const {store,setPIPERTOKEN} = useStore();
-     const router = useRouter();
+    const { store, setPIPERTOKEN } = useStore();
+    const router = useRouter();
 
     const onSubmit = () => {
       loading.value = true;
-      setPIPERTOKEN('dingzhaocheng');
-      router.push({
-        name:"Home"
-      })
-      setTimeout(() => {
-        loading.value = false;
 
+      setTimeout(() => {
+        setPIPERTOKEN("dingzhaocheng");
+
+        loading.value = false;
+        router.push({
+          name: "Home",
+        });
       }, 3000);
     };
 

@@ -15,12 +15,11 @@
 <script lang="ts">
 import { defineAsyncComponent, onErrorCaptured, ref } from "vue";
 import Loading from "@/components/Loading.vue";
-const TheProducts = defineAsyncComponent({
-  loader: () => import("@/components/TheProducts.vue"),
-  
-});
+const TheProducts = defineAsyncComponent(
+  () => import("@/components/TheProducts.vue")
+);
 export default {
-  name:"Home",
+  name: "Home",
   components: {
     TheProducts,
     Loading,
@@ -29,7 +28,7 @@ export default {
     id: Number,
   },
 
-  setup(props:any) {
+  setup(props: any) {
     const id = props.id;
     const error = ref();
     onErrorCaptured((e) => {
